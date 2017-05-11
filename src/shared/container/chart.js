@@ -9,7 +9,7 @@ const socket = io(`http://localhost:8080`)
 import { getStocksAsync } from '../action/chart_action'
 import { addStockAsync } from '../action/chart_action'
 import ChartAndStockList from '../component/chartAndStockList'
-import Modal from '../component/modal.jsx'
+import Modal from '../component/modal'
 import Loading from '../component/loading'
 import AddStock from './add-stock'
 import {
