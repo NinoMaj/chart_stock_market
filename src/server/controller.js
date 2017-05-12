@@ -7,12 +7,12 @@ export const homePage = () =>
       if (stockErr) {
         // console.log('hp1', stockErr)
         reject(stockErr)
-      } else if (data) {
+      } else if (data.length === 0) {
         console.log('hp2', data)
         resolve([])
       } else {
-        // console.log('hp3', stocks)
-        resolve([])
+        console.log('hp3', stocks)
+        resolve(data[0].stocks)
       }
     })
   })
