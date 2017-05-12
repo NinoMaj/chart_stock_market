@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import $ from 'jquery'
 import io from 'socket.io-client'
-const socket = io(`//charting-stock-market.herokuapp.com`)
+const socket = io(`https://charting-stock-market.herokuapp.com`)
 
 import { getStocksAsync } from '../action/chart_action'
 import { addStockAsync } from '../action/chart_action'
