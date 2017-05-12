@@ -6,12 +6,17 @@
   "browserslist": [
     "> 1%"
   ],
+  "engines": {
+    "node": "7.x",
+    "yarn": "0.20.3"
+  },
   "scripts": {
     "start": "npm run dev:start",
     "dev:start": "nodemon -e js,jsx --ignore build --exec babel-node src/server",
     "dev:wds": "webpack-dev-server --progress",
     "prod:build": "rimraf build dist && babel src -d build --ignore .test.js && cross-env NODE_ENV=production webpack -p --progress",
     "prod:start": "heroku local",
+    "heroku-postbuild": "yarn prod:build",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
     "prepush": "npm test && npm run prod:build",
     "test": "npm run lint && flow && jest --coverage"
