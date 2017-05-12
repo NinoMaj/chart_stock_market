@@ -7,9 +7,9 @@ export const homePage = () =>
       if (stockErr) {
         // console.log('hp1', stockErr)
         reject(stockErr)
-      } else if (data[0]) {
+      } else if (data) {
         console.log('hp2', data)
-        resolve(data[0].stocks)
+        resolve([])
       } else {
         // console.log('hp3', stocks)
         resolve([])
