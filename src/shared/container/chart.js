@@ -58,7 +58,7 @@ class ChartContainer extends React.Component {
     if (stocks.length !== 0) {
       stocks.forEach((name, i) => {
         $.ajax({
-          url: 'http://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + name + '&apikey=' + '9RU0',
+          url: 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + name + '&apikey=' + '9RU0',
           type: 'GET',
           dataType: 'json',
           success: function success(response) {
