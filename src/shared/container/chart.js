@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import $ from 'jquery'
 import io from 'socket.io-client'
-const socket = io(`http://localhost:8080`)
+const socket = io(`http://localhost:8000`)
 
 import { getStocksAsync } from '../action/chart_action'
 import { addStockAsync } from '../action/chart_action'
