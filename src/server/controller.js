@@ -11,7 +11,7 @@ export const homePage = () =>
         console.log('hp2', data)
         resolve([])
       } else {
-        console.log('hp3', stocks)
+        console.log('hp3', data)
         resolve(data[0].stocks)
       }
     })
