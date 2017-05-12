@@ -46,7 +46,7 @@ router.delete('/stocks/:stock', (req, res) => {
         res.status(401).end()
       } else {
         const newStockList = data.stocks.filter(stock => stock !== req.params.stock)
-        console.log('newStockList', newStockList)
+        // sconsole.log('newStockList', newStockList)
         res.status(200).json(newStockList).end()
       }
     }
