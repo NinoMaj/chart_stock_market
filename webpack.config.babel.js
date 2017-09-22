@@ -39,6 +39,6 @@ export default {
       '$': "jquery",
       'jQuery': "jquery",
       'Popper': 'popper.js'
-    }),
+    })
   ],
 }
