@@ -118,7 +118,7 @@ class ChartContainer extends React.Component {
   }
 
   handleNewStock(newStock) {
-    $.getJSON('http://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + newStock + '&apikey=' + '9RU0', response => {
+    $.getJSON('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=' + newStock + '&apikey=' + '9RU0', response => {
       if (response["Meta Data"]) {
         this.props.addStockAsync(newStock)
       } else {
