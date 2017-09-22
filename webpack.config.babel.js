@@ -35,5 +35,10 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      '$': "jquery",
+      'jQuery': "jquery",
+      'Popper': 'popper.js'
+    }),
   ],
 }

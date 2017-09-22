@@ -6,6 +6,9 @@ import { Server } from 'http'
 import socketIO from 'socket.io'
 import setUpSocket from './socket'
 import mongoose from 'mongoose'
+require('jquery/dist/jquery');
+require('popper.js/dist/umd/popper');
+require('bootstrap/dist/js/bootstrap')
 
 import routing from './routing'
 import { WEB_PORT, STATIC_PATH } from '../shared/config'
