@@ -11,11 +11,6 @@ export const STOCKS_ASYNC_REQUEST = 'STOCKS_ASYNC_REQUEST'
 export const STOCKS_ASYNC_SUCCESS = 'STOCKS_ASYNC_SUCCESS'
 export const STOCKS_ASYNC_FAILURE = 'STOCKS_ASYNC_FAILURE'
 
-// export const addStock = (payload: any) => ({
-//   type: ADD_STOCK,
-//   payload,
-// })
-
 export const stocksAsyncRequest = (payload: any) => ({
   type: STOCKS_ASYNC_REQUEST,
   payload,
@@ -33,15 +28,12 @@ export const stocksAsyncFailure = (payload: any) => ({
 
 export const addStockAsync = (newStock: string) => (dispatch: Function) => {
   dispatch(stocksAsyncRequest())
-  // console.log('temp', addStockEndpointRoute(newStock))
   return fetch(addStockEndpointRoute(newStock), { method: 'POST' })
     .then((res) => {
       if (!res.ok) throw Error(res.statusText)
-      // console.log('res in addStockAsync', res)
       return res.json()
     })
     .then((stocks) => {
-      // console.log('stocks in stockAsync addStock', stocks)
       if (!stocks) throw Error('No message received')
       dispatch(stocksAsyncSuccess(stocks))
     })
@@ -72,7 +64,6 @@ export const getStocksAsync = () => (dispatch: Function) => {
 
 export const deleteStockAsync = (removeStock: string) => (dispatch: Function) => {
   dispatch(stocksAsyncRequest())
-  // console.log('temp', addStockEndpointRoute(newStock))
   return fetch(deleteStockEndpointRoute(removeStock), { method: 'DELETE' })
     .then((res) => {
       console.log('res in addStockAsync', res)
